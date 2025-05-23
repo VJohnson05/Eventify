@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vendor Dashboard</title>
+  <link rel="stylesheet" href="css/vendordash.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <script type="module" src="js/vendor.js"></script>
+  <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+</head>
+<body>
+  <header class="dashboard-header">
+  <h1>Vendor Dashboard</h1>  
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="vendor-bookings.html">Vendor Bookings</a></li>
+      <li><a href="browse-services.html">Browse Services</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+  </nav>
+  <div class="user-info">
+    <span id="username"></span>
+    <button id="switch-role-btn" onclick="window.location.href='client-dashboard.html'" class="switch-role-btn">Switch Role</button>
+    <button id="logout-btn">Logout</button>   
+  </div> 
+</header>
+
+<main class="dashboard-main">
+
+   <!-- Vendor Section -->
+<section class="vendor-section">
+    <h2>Welcome, Valued Vendors</h2>
+    <p>Showcase your exceptional services and connect with clients seeking premium event experiences.</p>
+</section>
+
+    <section class="service-management">
+      <h2>Your Services</h2>
+      <button id="toggle-service-form-btn" class="add-service-btn">Add Service</button>
+      <form id="service-form" class="service-form" style="display: none;">
+        <label>Service Title</label>
+        <input type="text" id="service-title" placeholder="Service Title" required />
+        <label>Description</label>
+        <textarea id="service-description" placeholder="Service Description" required></textarea>
+        <label>Category</label>
+        <select id="service-category" required>
+          <option value="">-- Select a category --</option>
+          <option value="Catering">Catering</option>
+          <option value="Decoration">Decoration</option>
+          <option value="Florists">Florists</option>
+          <option value="Lighting">Lighting</option>
+          <option value="Makeup and Styling">Makeup and Styling</option>
+          <option value="Music and DJ">Music and DJ</option>
+          <option value="Photography">Photography</option>
+          <option value="Venue">Venue</option>
+        </select>
+        <label>Price</label>
+        <input type="number" id="service-price" placeholder="Starting Price (₹)" required />
+        <label>Images</label>
+        <div id="image-preview" class="image-preview"></div>
+        <button type="button" id="upload-widget-btn" class="upload-btn">Upload Images</button>
+        <button type="submit" class="save-btn">Save Service</button>
+      </form>
+
+      <div id="service-list" class="service-list">
+        <p>No services added yet.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <h2>Eventify</h2>
+      <p>Making your events unforgettable. Explore. Book. Celebrate.</p>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages.html#about">About Us</a></li>
+        <li><a href="pages.html#contact">Contact</a></li>
+        <li><a href="pages.html#privacy">Privacy Policy</a></li>
+        <li><a href="pages.html#terms">Terms of Service</a></li>
+      </ul>
+      <div class="social-icons">
+        <a><i class="fab fa-facebook-f"></i></a>
+        <a><i class="fab fa-instagram"></i></a>
+        <a><i class="fab fa-twitter"></i></a>
+        <a><i class="fab fa-linkedin-in"></i></a>
+        <a><i class="fab fa-youtube"></i></a>
+      </div>
+      <p>&copy; 2025 Eventify. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
