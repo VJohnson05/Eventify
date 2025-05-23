@@ -160,9 +160,30 @@ body {
   padding: 15px; 
   margin-bottom: 15px; 
   border-radius: 10px; 
-  border: 1px solid #ccc; 
+  border: 1.5px solid #007BFF; 
   font-size: 1rem; 
 } 
+
+/* Category Dropdown */
+#service-category {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1.5px solid #007BFF;
+  background-color: #fff;
+  font-size: 1rem;
+  color: #333;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+#service-category:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+}
+#service-category option {
+  padding: 10px;
+}
+
 .service-form .upload-btn, .service-form .save-btn { 
   background: #007bff; 
   color: #ffffff; 

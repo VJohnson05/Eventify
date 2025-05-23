@@ -97,7 +97,7 @@ body {
 .feedback-container select,
 .feedback-container textarea {
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1.5px solid #007BFF;
     border-radius: 10px;
     font-size: 1rem;
     resize: vertical;

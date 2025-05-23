@@ -84,7 +84,7 @@ const loadServices = (filterText = "", filterCategory = "") => {
                         const bookButton = isAvailable
                             ? `<button onclick="location.href='event-booking.html?vendorId=${userSnap.key}&serviceName=${encodeURIComponent(service.name)}&servicePrice=${encodeURIComponent(service.price)}'">
                                 Book Vendor
-                            </button>`
+                                </button>`
                             : `<button disabled class="unavailable">Vendor Unavailable</button>`;
 
                         const serviceCard = document.createElement("div");
@@ -96,9 +96,11 @@ const loadServices = (filterText = "", filterCategory = "") => {
                                 <button class="arrow right">&gt;</button>
                             </div>
                             <h3>${service.name}</h3>  
-                            <p>${service.description}</p>  
+                            <p class="description">${service.description}</p>
+                            <div class="details">  
                             <p class="category">Category: ${service.category}</p> 
-                            <p class="price">Price: ₹${service.price}</p>  
+                            <p class="price">Price: ₹${service.price}</p>
+                            </div>  
                             ${bookButton}
                         `;
                         vendorContainer.appendChild(serviceCard);
@@ -111,8 +113,14 @@ const loadServices = (filterText = "", filterCategory = "") => {
             }
         });
 
-        // Populate category filter
-        categoryFilter.innerHTML = '<option value="">All Categories</option>' + Array.from(categories).map(cat => `<option value="${cat}">${cat}</option>`).join("");
+// Populate category filter
+const currentCategory = categoryFilter.value; // Save selected value
+categoryFilter.innerHTML = '<option value="">All Categories</option>' + 
+    Array.from(categories).map(cat => `<option value="${cat}">${cat}</option>`).join("");
+
+// Restore selected value
+categoryFilter.value = currentCategory;
+
     });
 };
 

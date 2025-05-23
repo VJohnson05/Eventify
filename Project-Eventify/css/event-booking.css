@@ -113,7 +113,7 @@ main {
 #booking-form textarea {
     width: 100%;
     padding: 10px 15px;
-    border: 1px solid #ccc;
+    border: 1.5px solid #007BFF;
     border-radius: 8px;
     font-size: 1rem;
     transition: border-color 0.3s ease;

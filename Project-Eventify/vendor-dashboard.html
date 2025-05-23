@@ -44,7 +44,17 @@
         <label>Description</label>
         <textarea id="service-description" placeholder="Service Description" required></textarea>
         <label>Category</label>
-        <input type="text" id="service-category" placeholder="Category (e.g., Catering, Photography)" required />
+        <select id="service-category" required>
+          <option value="">-- Select a category --</option>
+          <option value="Catering">Catering</option>
+          <option value="Decoration">Decoration</option>
+          <option value="Florists">Florists</option>
+          <option value="Lighting">Lighting</option>
+          <option value="Makeup and Styling">Makeup and Styling</option>
+          <option value="Music and DJ">Music and DJ</option>
+          <option value="Photography">Photography</option>
+          <option value="Venue">Venue</option>
+        </select>
         <label>Price</label>
         <input type="number" id="service-price" placeholder="Starting Price (₹)" required />
         <label>Images</label>
