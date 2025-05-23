@@ -1,0 +1,243 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+/* Body Background */
+body {
+    background: linear-gradient(135deg, #007bff, #00d4ff, #007bff);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: #000000;
+    color: #fff;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #007bff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+header nav ul li a::after{
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background: #00d4ff;
+    transition: 0.3s ease;
+    transform: translateX(-50%);
+}
+header nav ul li a:hover::after{
+    width: 100%;
+}
+header nav ul li a:hover {
+    color: #00d4ff;
+}
+
+/* Main Section */
+main {
+    padding: 100px 20px 60px;
+    min-height: calc(100vh - 200px);
+}
+
+/* Container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    text-align: left;
+}
+
+.container h2, .container h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #002b5b;
+}
+
+/* Booking List */
+.booking-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Each Booking Card */
+.booking-item {
+    background-color: #e6f0ff;
+    padding: 20px;
+    border-left: 5px solid #007bff;
+    border-radius: 10px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.booking-item:hover {
+    transform: scale(1.01);
+}
+
+.booking-item h3 {
+    margin-bottom: 10px;
+    color: #002b5b;
+    font-size: 1.3rem;
+}
+
+.booking-item p {
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+/* Status Badges */
+.status-badge {
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 0.9rem;
+}
+
+.status-badge.pending-confirmation {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.status-badge.confirmed {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.status-badge.declined {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.status-badge.in-progress {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+.status-badge.completed {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.status-badge.cancelled {
+    background-color: #343a40;
+    color: #fff;
+}
+
+/* Footer Styles */ 
+footer { 
+    background: #000000; 
+    color: #fff;
+    padding: 40px 40px; 
+    text-align: center; 
+    border-top: 3px solid #007bff; 
+    box-shadow: 0 -6px 20px rgba(1, 34, 251, 0.3);
+    margin-top: 10px; 
+} 
+footer h2 { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 2.2rem; 
+    margin-bottom: 10px; 
+} 
+footer p { 
+    font-size: 1rem; 
+    margin-bottom: 15px; 
+} 
+footer ul { 
+    list-style: none; 
+    padding: 0; 
+    margin-bottom: 10px; 
+} 
+footer ul li { 
+    display: inline-block; 
+    margin: 0 15px; 
+} 
+footer ul li a { 
+    color: #ffffff; 
+    text-decoration: none; 
+    font-size: 1rem; 
+    transition: color 0.3s ease; 
+} 
+footer ul li a::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #00d4ff;
+    transition: width 0.3s;
+    margin-top: 5px;
+}
+footer ul li a:hover { 
+    color: #00d4ff; 
+} 
+footer ul li a:hover::after {
+    width: 100%;
+}
+footer .social-icons a { 
+    color: #fff; 
+    font-size: 1.5rem; 
+    margin: 0 10px; 
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block; 
+} 
+footer .social-icons a:hover { 
+    color: #00d4ff; 
+    transform: rotate(-8deg) scale(1.2); 
+}
+footer p:last-of-type {
+    color: #007bff;  
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .container {
+        padding: 25px;
+    }
+}

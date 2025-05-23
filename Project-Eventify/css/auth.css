@@ -1,0 +1,206 @@
+/* General Styles */
+*{ 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} 
+body { 
+    background-color: #f4f4f4; 
+    color: #333; 
+    line-height: 1.6; 
+    overflow-x: hidden; 
+}
+
+/* Header Styles */ 
+.header { 
+    position: fixed; 
+    width: 100%; 
+    background: #000000; 
+    color: #fff; 
+    padding: 15px 0; 
+    z-index: 1000; 
+    transition: background 0.3s ease;
+    border-bottom: 3px solid #007bff;  
+} 
+.header .container { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 40px; 
+} 
+.header h1 { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 2.2rem; 
+    color: #fff; 
+    font-weight: bold; 
+} 
+.header a { 
+    color: #ffffff;
+    text-decoration: none; 
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+.header a::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background: #00d4ff;
+    transition: 0.3s ease;
+    transform: translateX(-50%);
+}
+header a:hover::after {
+    width: 100%;
+}
+.header a:hover { 
+    color: #00d4ff;   
+}
+
+/* Auth Section */
+.auth-section { 
+    min-height: 100vh; 
+    background-image: url('../background/Blue6.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 40px 20px; 
+} 
+.auth-section .container { 
+    background: rgba(255, 255, 255, 0.95); 
+    padding: 15px 30px; 
+    border-radius: 20px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 500px; 
+    width: 100%;
+    margin-top: 80px;
+} 
+.auth-section h2 { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 2.5rem; 
+    color: #002b5b; 
+    margin-bottom: 20px; 
+    text-align: center; 
+} 
+.auth-section form label { 
+    font-weight: bold; 
+    color: #002b5b; 
+    margin-bottom: 5px; 
+    display: block; 
+} 
+.auth-section form input[type="text"], 
+.auth-section form input[type="email"], 
+.auth-section form input[type="password"] 
+{ 
+    width: 100%; 
+    padding: 12px; 
+    margin-bottom: 20px; 
+    border: 2px solid #007bff; 
+    border-radius: 10px; 
+    transition: border-color 0.3s ease, background-color 0.3s ease; 
+} 
+.auth-section form input:focus { 
+    border-color: #0096c7; 
+    background-color: #f0f8ff; 
+} 
+.auth-section button[type="submit"], 
+.auth-section button[type="button"] 
+{
+    width: 100%; 
+    background: #007bff; 
+    color: #ffffff; padding: 12px;
+    border-radius: 30px; 
+    margin-bottom: 20px; 
+    font-size: 1.1rem; 
+    font-weight: bold; 
+    border: none; 
+    transition: background 0.3s ease, transform 0.3s ease; 
+    cursor: pointer; 
+} 
+.auth-section button:hover { 
+    background: #00d4ff; 
+    color: #002b5b; 
+    transform: translateY(-5px); 
+} 
+.auth-section #toggle-btn { 
+    background: transparent; 
+    color: #002b5b; 
+    border: none; 
+    font-weight: bold; 
+    text-decoration: underline; 
+    cursor: pointer; 
+    transition: all 0.4s ease; 
+} 
+.auth-section #toggle-btn:hover { 
+    color: #00d4ff; 
+}
+
+/* Footer Styles */ 
+footer { 
+    background: #000000; 
+    color: #fff;
+    padding: 40px 40px; 
+    text-align: center; 
+    border-top: 3px solid #007bff; 
+    box-shadow: 0 -6px 20px rgba(1, 34, 251, 0.3);
+} 
+footer h2 { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 2.2rem; 
+    margin-bottom: 10px; 
+} 
+footer p { 
+    font-size: 1rem; 
+    margin-bottom: 15px; 
+} 
+footer ul { 
+    list-style: none; 
+    padding: 0; 
+    margin-bottom: 10px; 
+} 
+footer ul li { 
+    display: inline-block; 
+    margin: 0 15px; 
+} 
+footer ul li a { 
+    color: #ffffff; 
+    text-decoration: none; 
+    font-size: 1rem; 
+    transition: color 0.3s ease; 
+} 
+footer ul li a::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #00d4ff;
+    transition: width 0.3s;
+    margin-top: 5px;
+}
+footer ul li a:hover { 
+    color: #00d4ff; 
+} 
+footer ul li a:hover::after {
+    width: 100%;
+}
+footer .social-icons a { 
+    color: #fff; 
+    font-size: 1.5rem; 
+    margin: 0 10px; 
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block; 
+} 
+footer .social-icons a:hover { 
+    color: #00d4ff; 
+    transform: rotate(-8deg) scale(1.2); 
+}
+footer p:last-of-type {
+    color: #007bff;  
+}

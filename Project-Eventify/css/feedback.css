@@ -1,0 +1,214 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('../background/Blue6.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  color: #333;
+}
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #000000; 
+  color: white;
+  padding: 15px 0;
+  z-index: 1000;
+  border-bottom: 3px solid #007bff;
+}
+.header .container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header h1 {
+  font-family: 'Playfair Display', serif; 
+  font-size: 2.5rem; 
+  margin: 0;
+}
+.header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+.header nav a {
+  color: #fff; 
+  text-decoration: none; 
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.header nav a::after{
+   content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background: #00d4ff;
+    transition: 0.3s ease;
+    transform: translateX(-50%);
+}
+.header nav a:hover::after{
+  width: 100%
+}
+.header nav a:hover {
+  color: #00d4ff;
+}
+/* Feedback Page Styles */
+
+.feedback-container {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 25px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.feedback-container h2 {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    color: #002b5b;
+    margin-bottom: 30px;
+}
+
+.feedback-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feedback-container label {
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+}
+
+.feedback-container select,
+.feedback-container textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    resize: vertical;
+    transition: border 0.3s ease;
+}
+
+.feedback-container select:focus,
+.feedback-container textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.feedback-container textarea {
+    min-height: 120px;
+}
+
+.cta-button {
+    background: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    align-self: flex-start;
+}
+
+.cta-button:hover {
+    background: #00d4ff;
+    color: #002b5b;
+    transform: scale(1.05);
+}
+
+/* Footer Styles */ 
+footer { 
+    background: #000000; 
+    color: #fff;
+    padding: 40px 40px; 
+    text-align: center; 
+    border-top: 3px solid #007bff; 
+    box-shadow: 0 -6px 20px rgba(1, 34, 251, 0.3);
+    margin-top: 45px; 
+} 
+footer h2 { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 2.2rem; 
+    margin-bottom: 10px; 
+} 
+footer p { 
+    font-size: 1rem; 
+    margin-bottom: 15px; 
+} 
+footer ul { 
+    list-style: none; 
+    padding: 0; 
+    margin-bottom: 10px; 
+} 
+footer ul li { 
+    display: inline-block; 
+    margin: 0 15px; 
+} 
+footer ul li a { 
+    color: #ffffff; 
+    text-decoration: none; 
+    font-size: 1rem; 
+    transition: color 0.3s ease; 
+} 
+footer ul li a::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #00d4ff;
+    transition: width 0.3s;
+    margin-top: 5px;
+}
+footer ul li a:hover { 
+    color: #00d4ff; 
+} 
+footer ul li a:hover::after {
+    width: 100%;
+}
+footer .social-icons a { 
+    color: #fff; 
+    font-size: 1.5rem; 
+    margin: 0 10px; 
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block; 
+} 
+footer .social-icons a:hover { 
+    color: #00d4ff; 
+    transform: rotate(-8deg) scale(1.2); 
+}
+footer p:last-of-type {
+    color: #007bff;  
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .feedback-container {
+        padding: 25px;
+    }
+
+    .feedback-container h2 {
+        font-size: 2rem;
+    }
+
+    .cta-button {
+        width: 100%;
+        text-align: center;
+    }
+}

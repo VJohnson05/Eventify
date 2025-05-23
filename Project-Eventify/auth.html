@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SignUp/Login</title>
+  <link rel="stylesheet" href="css/auth.css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>SignUp/Login</h1>
+      <a href="index.html">Home</a>
+    </div>
+  </header>
+
+  <section class="auth-section">
+    <div class="container">
+      <!-- Login Form -->
+      <div id="login-container">
+        <h2>Login to Your Account</h2>
+        <form id="login-form">
+          <label for="login-email">Email:</label>
+          <input type="email" id="login-email" placeholder="Enter your email" required />
+
+          <label for="login-password">Password:</label>
+          <input type="password" id="login-password" placeholder="Enter your password" required />
+
+          <button type="submit">Login</button>
+          <button type="button" id="google-login">Sign in with Google</button>
+        </form>
+      </div>
+
+      <!-- Registration Form -->
+      <div id="register-container" style="display: none;">
+        <h2>Create an Account</h2>
+        <form id="register-form">
+          <label for="username">Username:</label>
+          <input type="text" id="username" placeholder="Enter your username" required />
+
+          <label for="register-email">Email:</label>
+          <input type="email" id="register-email" placeholder="Enter your email" required />
+
+          <label for="register-password">Password:</label>
+          <input type="password" id="register-password" placeholder="Enter your password" required />
+
+          <label>Select Role:</label>
+          <div style="text-align: left; padding-left: 10px;">
+            <label><input type="checkbox" name="role" value="client"> Client</label>
+            <label><input type="checkbox" name="role" value="vendor"> Vendor</label>
+          </div>
+
+          <button type="submit">Register</button>
+          <button type="button" id="google-register">Sign up with Google</button>
+        </form>
+      </div>
+
+      <!-- Toggle Button -->
+      <button id="toggle-btn">Don't have an account? Register here</button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <h2>Eventify</h2>
+      <p>Making your events unforgettable. Explore. Book. Celebrate.</p>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages.html#about">About Us</a></li>
+        <li><a href="pages.html#contact">Contact</a></li>
+        <li><a href="pages.html#privacy">Privacy Policy</a></li>
+        <li><a href="pages.html#terms">Terms of Service</a></li>
+      </ul>
+      <div class="social-icons">
+        <a><i class="fab fa-facebook-f"></i></a>
+        <a><i class="fab fa-instagram"></i></a>
+        <a><i class="fab fa-twitter"></i></a>
+        <a><i class="fab fa-linkedin-in"></i></a>
+        <a><i class="fab fa-youtube"></i></a>
+      </div>
+      <p>&copy; 2025 Eventify. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/auth.js"></script>
+  <script type="module" src="js/firebase-auth.js"></script>
+</body>
+</html>

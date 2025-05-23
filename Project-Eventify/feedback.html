@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="css/feedback.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script type="module" src="js/feedback.js"></script>
+</head>
+<body>
+   <header class="header">
+    <div class="container">
+        <h1>Eventify</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browse-services.html">Browse Services</a></li>
+                <li><a href="client-dashboard.html" id="client-dashboard-link" style="display: none;">Client Dashboard</a></li>
+                <li><a href="vendor-dashboard.html" id="vendor-dashboard-link" style="display: none;">Vendor Dashboard</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <main style="padding-top: 100px;">
+        <section class="feedback-container">
+            <h2>Share Your Feedback</h2>
+            <form id="feedback-form">
+                <label for="rating">Rating:</label>
+                <select id="rating" name="rating" required>
+                    <option value="" disabled selected>Rate our services</option>
+                    <option value="5">Excellent (5 Stars)</option>
+                    <option value="4">Very Good (4 Stars)</option>
+                    <option value="3">Good (3 Stars)</option>
+                    <option value="2">Fair (2 Stars)</option>
+                    <option value="1">Poor (1 Star)</option>
+                </select>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Share your thoughts..." required></textarea>
+
+                <button type="submit" class="cta-button">Submit Feedback</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+    <div class="footer-content">
+      <h2>Eventify</h2>
+      <p>Making your events unforgettable. Explore. Book. Celebrate.</p>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages.html#about">About Us</a></li>
+        <li><a href="pages.html#contact">Contact</a></li>
+        <li><a href="pages.html#privacy">Privacy Policy</a></li>
+        <li><a href="pages.html#terms">Terms of Service</a></li>
+      </ul>
+      <div class="social-icons">
+        <a><i class="fab fa-facebook-f"></i></a>
+        <a><i class="fab fa-instagram"></i></a>
+        <a><i class="fab fa-twitter"></i></a>
+        <a><i class="fab fa-linkedin-in"></i></a>
+        <a><i class="fab fa-youtube"></i></a>
+      </div>
+      <p>&copy; 2025 Eventify. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

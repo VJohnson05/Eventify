@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Services</title>
+    <link rel="stylesheet" href="css/browse.css">
+    <script type="module" src="js/browse.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <h1>Eventify</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="client-dashboard.html" id="client-dashboard-link" class="nav-link">Client Dashboard</a></li>
+                <li><a href="vendor-dashboard.html" id="vendor-dashboard-link" class="nav-link">Vendor Dashboard</a></li>
+                <li><a href="auth.html" id="auth-link" class="nav-link">Login/Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+    <!-- Hero Section -->
+    <section class="vendor-section">
+        <h2>Explore Our Trusted Vendors</h2>
+        <p>Find the perfect services for your event from our curated list of top vendors.</p>
+        <h2 class="tagline">Plan It Now, Thank Us Later</h2>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search for services">
+            <select id="category-filter">
+                <option value="">All Categories</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="vendor-container" id="vendor-container">
+        <!-- Dynamic vendor cards will be inserted here -->
+    </section>
+</main>
+    <!-- Footer -->
+<footer>
+    <div class="footer-content">
+      <h2>Eventify</h2>
+      <p>Making your events unforgettable. Explore. Book. Celebrate.</p>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages.html#about">About Us</a></li>
+        <li><a href="pages.html#contact">Contact</a></li>
+        <li><a href="pages.html#privacy">Privacy Policy</a></li>
+        <li><a href="pages.html#terms">Terms of Service</a></li>
+      </ul>
+      <div class="social-icons">
+        <a><i class="fab fa-facebook-f"></i></a>
+        <a><i class="fab fa-instagram"></i></a>
+        <a><i class="fab fa-twitter"></i></a>
+        <a><i class="fab fa-linkedin-in"></i></a>
+        <a><i class="fab fa-youtube"></i></a>
+      </div>
+      <p>&copy; 2025 Eventify. All Rights Reserved.</p>
+    </div>
+</footer>
+</body>
+</html>

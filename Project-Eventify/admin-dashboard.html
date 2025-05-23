@@ -1,0 +1,101 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <!-- Admin Dashboard Navigation -->
+  <header class="admin-header">
+    <h1>Admin Dashboard</h1>
+    <nav class="admin-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#dashboard-overview">DashboardOverview</a></li>
+        <li><a href="#user-management">UserManagement</a></li>
+        <li><a href="#vendor-services">VendorServices</a></li>
+        <li><a href="#service-categories">ServiceCategories</a></li>
+        <li><a href="#feedback-management">FeedbackManagement</a></li>
+      </ul>
+    </nav>
+    <div class="user-info">
+        <span id="username"></span> 
+        <button id="logout-btn">Logout</button>
+    </div>
+  </header>  
+  <!-- Dashboard Overview Section -->  
+  <section id="dashboard-overview" class="dashboard-overview">
+    <h2>Dashboard Overview</h2>
+    <div class="overview-cards">
+      <div class="card">
+        <h3>Total Users</h3>
+        <p id="total-users">0</p>
+      </div>
+      <div class="card">
+        <h3>Active Vendors</h3>
+        <p id="active-vendors">0</p>
+      </div>
+      <div class="card">
+        <h3>Total Services</h3>
+        <p id="total-services">0</p>
+      </div>
+    </div>
+  </section>  
+  <!-- User Management Section -->  
+   <section id="user-management" class="user-management">
+    <h2>User Management</h2>
+    <input type="text" id="user-search" placeholder="Search Users" />
+    <table>
+      <thead>
+        <tr>
+          <th>User ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="user-table">
+        <!-- User data will be populated here -->
+      </tbody>
+    </table>
+  </section>  
+  <!-- Vendor Service Management Section -->  
+   <section id="vendor-services" class="vendor-services">
+    <h2>Vendor Service Management</h2>
+    <input type="text" id="service-search" placeholder="Search Services" />
+    <table>
+      <thead>
+        <tr>
+          <th>Vendor ID</th>
+          <th>Service Name</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="service-table">
+        <!-- Service data will be populated here -->
+      </tbody>
+    </table>
+  </section>  
+  <!-- Feedback Management Section -->  
+   <section id="feedback-management" class="feedback-management">
+    <h2>Feedback Management</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Feedback ID</th>
+          <th>Name</th>
+          <th>Message</th>
+          <th>Rating</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="feedback-table">
+        <!-- Feedback data will be populated here -->
+      </tbody>
+    </table>
+  </section>  <script type="module" src="js/admin.js"></script></body>
+</html>

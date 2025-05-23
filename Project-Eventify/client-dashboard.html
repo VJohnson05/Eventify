@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard</title>
+    <link rel="stylesheet" href="css/client.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script type="module" src="js/client.js"></script>
+</head>
+<body>
+    <header class="dashboard-header">
+        <h1>Client Dashboard</h1>     
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+        <div class="user-info">
+            <span id="username"></span>
+            <button id="switch-role-btn" class="switch-role-btn" onclick="location.href='vendor-dashboard.html'">Switch Role</button> 
+            <button id="logout-btn">Logout</button>
+        </div>   
+    </header>
+
+<main class="dashboard-main">
+
+    <!-- Hero Section -->
+    <section class="vendor-section">
+        <h2>Welcome to Eventify!</h2>
+        <p>Discover a world of exceptional event services and make your celebrations unforgettable.</p>
+        <h2 class="tagline">Plan It Now, Thank Us Later</h2>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="dashboard-cards">  
+    <div class="card">
+        <h3>Event Bookings</h3>
+        <p>Effortlessly manage your bookings and keep your event plans on track.</p>
+        <button onclick="location.href='client-bookings.html'">View My Bookings</button>
+    </div>
+    <div class="card">
+        <h3>Explore Services</h3>
+        <p>Browse top-rated vendors and find the perfect match for your event.</p>
+        <button onclick="location.href='browse-services.html'">Explore Services</button>
+    </div>
+    <div class="card">
+        <h3>Budget Tracker</h3>
+        <p>Keep your budget in check and track every expense with ease.</p>
+        <button onclick="location.href='budget-tracker.html'">Manage Budget</button>
+    </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-content">
+      <h2>Eventify</h2>
+      <p>Making your events unforgettable. Explore. Book. Celebrate.</p>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages.html#about">About Us</a></li>
+        <li><a href="pages.html#contact">Contact</a></li>
+        <li><a href="pages.html#privacy">Privacy Policy</a></li>
+        <li><a href="pages.html#terms">Terms of Service</a></li>
+      </ul>
+      <div class="social-icons">
+        <a><i class="fab fa-facebook-f"></i></a>
+        <a><i class="fab fa-instagram"></i></a>
+        <a><i class="fab fa-twitter"></i></a>
+        <a><i class="fab fa-linkedin-in"></i></a>
+        <a><i class="fab fa-youtube"></i></a>
+      </div>
+      <p>&copy; 2025 Eventify. All Rights Reserved.</p>
+    </div>
+</footer>
+</body>
+</html>

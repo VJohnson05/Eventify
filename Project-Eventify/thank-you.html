@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You - Eventify</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+       font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        background-image: url('./background/blue6.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #333;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 20px;
+    }   
+
+    .thank-you-container {
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 40px 50px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .thank-you-message h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      color: #002b5b;
+      margin-bottom: 20px;
+    }
+
+    .thank-you-message p {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 30px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .explore-btn {
+      background: #007bff;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 12px 30px;
+      border-radius: 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      display: inline-block;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .explore-btn:hover {
+      background: #00d4ff;
+      color: #002b5b;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 480px) {
+      .thank-you-container {
+        padding: 30px 20px;
+      }
+
+      .thank-you-message h1 {
+        font-size: 2.2rem;
+      }
+
+      .thank-you-message p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="thank-you-container">
+    <div class="thank-you-message">
+      <h1>Thank You for Your Booking!</h1>
+      <p>Your booking has been successfully placed. We will get back to you soon.</p>
+      <a href="browse-services.html" class="explore-btn">Explore More Services</a>
+    </div>
+  </div>
+</body>
+</html>
