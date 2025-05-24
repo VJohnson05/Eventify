@@ -29,7 +29,15 @@ const initializeVendorDashboard = () => {
     const userRef = ref(db, `users/${user.uid}`); 
     get(userRef).then((snapshot) => { 
       const userData = snapshot.val(); 
-      const roles = userData?.roles || {}; 
+      const roles = userData?.roles || {};
+      
+    // Check if the user has vendor access
+    if (!roles.vendor) {
+      alert("Access Denied: You are not authorized to access the Vendor Dashboard.");
+      window.location.href = "auth.html"; // or redirect to a general page
+      return; // Stop further execution
+    }
+      
       const switchBtn = document.getElementById("switch-role-btn"); 
       if (switchBtn) { 
         switchBtn.style.display = roles.client && roles.vendor ? "block" : "none"; 

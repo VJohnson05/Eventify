@@ -29,6 +29,13 @@ onAuthStateChanged(auth, async (user) => {
                 const roles = userData.roles || {};
                 const roleCount = Object.keys(roles).length;
 
+                // Check if user has the 'client' role
+                if (!roles.client) {
+                    alert("Access denied. You are not a client.");
+                    window.location.href = "auth.html"; // Or redirect to a common page
+                    return;
+                }
+
                 // Show username
                 const usernameDisplay = document.getElementById("username");
                 if (user.displayName) {
