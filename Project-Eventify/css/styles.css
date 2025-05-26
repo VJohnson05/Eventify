@@ -143,20 +143,119 @@ body {
   text-shadow: 4px 4px 12px rgb(5, 0, 0);
 }
 
+/* Base CTA Button */
 .overlay-content .cta-button {
-  background: #007bff;
-  color: #ffffff;
+  position: relative;
+  display: inline-block;
   padding: 15px 40px;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  background-color: #000;
+  font-weight: bold;
   font-size: 1.2rem;
-  border-radius: 30px;
   text-decoration: none;
-  transition: background 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+  margin-top: 40px;
+  letter-spacing: 2px;
+  border-radius: 30px;
+  transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
 }
 
+/* Hover Effect */
 .overlay-content .cta-button:hover {
   background: #00d4ff;
-  color: #002b5b;
+  color: #fff;
+  border-radius: 30px;
+  box-shadow: 0 0 25px #00d4ff,
+              0 0 50px #00d4ff;
   transform: scale(1.05);
+}
+
+/* Border Animation */
+.overlay-content .cta-button span {
+  position: absolute;
+  background: #007bff;
+  transition: background 0.3s ease, box-shadow 0.3s ease ;
+}
+.overlay-content .cta-button:hover span {
+  background: #fff;
+  box-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff;
+}
+
+/* Top Border */
+.overlay-content .cta-button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  animation: btn-anim1 1s linear infinite;
+}
+
+/* Right Border */
+.overlay-content .cta-button span:nth-child(2) {
+  right: 0;
+  top: -100%;
+  height: 100%;
+  width: 2px;
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+/* Bottom Border */
+.overlay-content .cta-button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+/* Left Border */
+.overlay-content .cta-button span:nth-child(4) {
+  left: 0;
+  bottom: -100%;
+  height: 100%;
+  width: 2px;
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+/* Keyframes */
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%, 100% {
+    right: 100%;
+  }
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%, 100% {
+    bottom: 100%;
+  }
 }
 
 /* CTA Section */
@@ -183,7 +282,7 @@ body {
   background: #00d4ff;
   color: #002b5b;
   padding: 10px 35px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   border-radius: 30px;
   text-decoration: none;
   transition: background 0.3s ease, transform 0.3s ease;

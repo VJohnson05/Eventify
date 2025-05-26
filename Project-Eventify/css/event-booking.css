@@ -24,7 +24,7 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 3px solid #007bff;
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 1000;
 }
